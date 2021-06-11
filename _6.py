@@ -155,12 +155,7 @@ class PoliceCar(Car):
             return f'{self.name} is from police department'
         else:
             return f'{self.name} is not from police department'
-
-
-
-#Задание 5.Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
-#Выполните вызов методов и также покажите результат.
-
+        
 audi = SportCar(100, 'Red', 'Audi', False)
 oka = TownCar(30, 'White', 'Oka', False)
 lada = WorkCar(70, 'Rose', 'Lada', True)
@@ -175,6 +170,19 @@ print(audi.show_speed())
 print(oka.show_speed())
 print(ford.police())
 print(ford.show_speed())
+
+
+#Задание 5.Создайте экземпляры классов, передайте значения атрибутов. Выполните доступ к атрибутам, выведите результат.
+#Выполните вызов методов и также покажите результат.
+
+class MyClass:
+    _attr = "значение"
+    def _method(self):
+        print("Это защищенный метод!")
+
+mc = MyClass()
+mc._method()
+print(mc._attr)
 
 #Задание 6.Реализовать класс Stationery (канцелярская принадлежность). Определить в нем атрибут title (название) и метод draw (отрисовка).
 #Метод выводит сообщение “Запуск отрисовки.” Создать три дочерних класса Pen (ручка), Pencil (карандаш), Handle (маркер). В каждом из классов реализовать
